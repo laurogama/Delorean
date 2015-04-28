@@ -14,7 +14,11 @@ var App = React.createClass({
             });
         },
         getInitialState: function () {
-            return {data: []};
+            return {
+                data: {
+                    participants: []
+                }
+            };
         },
         componentDidMount: function () {
             this.loadCommentsFromServer();
@@ -22,9 +26,9 @@ var App = React.createClass({
         },
         render: function () {
             return (<div  className="App">
-                <h1>Event:&nbsp;{this.state.data.event}</h1>
+                <h1>Event:&nbsp;{this.state.data.showTitle}</h1>
                 <h2>Participants</h2>
-                <ParticipantsList participants={this.state.data.participants}/>
+                <ParticipantsList data={this.state.data}/>
             </div>
             );
         }
@@ -33,7 +37,8 @@ var App = React.createClass({
 
 var ParticipantsList = React.createClass({
     render: function () {
-        var participantsNodes = this.props.participants.map(function (participant) {
+        console.log(this.props.data);
+        var participantsNodes = this.props.data.participants.map(function (participant) {
             return (
                 <Participant data={participant}></Participant>);
         });
@@ -54,4 +59,4 @@ var Participant = React.createClass({
             </div>);
     }
 });
-React.render(<App url="/mocks/participants.json" pollInterval={2000} />, document.getElementById("mydiv"));
+React.render(<App url="participants" pollInterval={2000} />, document.getElementById("mydiv"));

@@ -1,0 +1,20 @@
+{
+  "event": "Circus",
+  "participants": [
+    {
+      "id": 1,
+      "name": "Pete Hunt",
+      "profession": "Juggler"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Walke",
+      "profession": "Clown"
+    },
+    {
+      "id": 3,
+      "name": "Ivanna Fuckalot",
+      "profession": "Sword Eater"
+    }
+  ]
+}

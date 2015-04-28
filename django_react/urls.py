@@ -9,5 +9,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^', include(urls())),
-    url(r'^', 'Delorean.views.home', name='home')
+    url(r'^$', 'Delorean.views.home', name='home'),
+    url(r'^participants/$', 'Delorean.views.mock_participants',
+        name='participants')
 ]
