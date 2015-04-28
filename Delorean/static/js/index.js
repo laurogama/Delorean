@@ -37,7 +37,6 @@ var App = React.createClass({
 
 var ParticipantsList = React.createClass({
     render: function () {
-        console.log(this.props.data);
         var participantsNodes = this.props.data.participants.map(function (participant) {
             return (
                 <Participant data={participant}></Participant>);
