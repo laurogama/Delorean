@@ -17,17 +17,20 @@ def mock_participants(request):
             {
                 "id": 1,
                 "name": "Pete Hunt",
-                "profession": "Juggler"
+                "profession": "Juggler",
+                "likes": 0
             },
             {
                 "id": 2,
                 "name": "Jordan Walke",
-                "profession": "Clown"
+                "profession": "Clown",
+                "likes": 0
             },
             {
                 "id": 3,
                 "name": "Ivanna Fuckalot",
-                "profession": "Sword Eater"
+                "profession": "Sword Eater",
+                "likes": 0
             }
         ]
     }
